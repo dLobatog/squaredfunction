@@ -1,14 +1,18 @@
 {% extends "base.html" %}
 {% block content %}
   <div class="jumbotron">
-    <h1>Welcome to squaredfunction</h1>
-    <p>Time to start building your site!</p>
-    <p><a class="btn btn-primary btn-lg" href="http://luminusweb.net">Learn more &raquo;</a></p>
-  </div>
+    <h1>squaredfunction</h1>
+    <p>Upload your script here:</p>
+		<form action="/upload" enctype="multipart/form-data" method="POST">
+			<input id="file" name="file" type="file" />
+			<hr/>
+			<p><input type="submit" class="btn btn-primary" value="Run!"/></p>
+		</form>
+	</div>
 
-  <div class="row">
-    <div class="span12">
-    {{docs|markdown}}
-    </div>
-  </div>
+	<div class="row">
+		<div class="span12">
+			{{docs|markdown}}
+		</div>
+	</div>
 {% endblock %}

@@ -1,6 +1,4 @@
-
-
-### Managing Your Middleware
+### Help
 
 Request middleware functions are located under the `squaredfunction.middleware` namespace.
 
